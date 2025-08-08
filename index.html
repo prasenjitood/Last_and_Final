@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IIUC Course Tracker Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-100">
+  
+  <!-- Background with overlay -->
+  <div class="absolute inset-0 bg-[url('https://your-background-image-link.jpg')] bg-cover bg-center"></div>
+  <div class="absolute inset-0 bg-blue-900 bg-opacity-60"></div>
+
+  <!-- Login Card -->
+  <div class="relative z-10 bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+    <!-- Logo -->
+    <div class="flex flex-col items-center mb-6">
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/0f/International_Islamic_University_Chittagong_logo.png" alt="IIUC Logo" class="w-16 h-16 mb-2">
+      <h1 class="text-2xl font-bold text-gray-800">IIUC <span class="text-yellow-500 font-semibold">Course Tracker</span></h1>
+      <p class="text-sm text-gray-600">International Islamic University Chittagong</p>
+    </div>
+
+    <!-- Title -->
+    <h2 class="text-xl font-bold text-center mb-4">Student Login</h2>
+    <p class="text-sm text-center text-gray-500 mb-6">Sign in with your IIUC credentials to access your courses</p>
+
+    <!-- Form -->
+    <form id="loginForm" class="space-y-4">
+      <!-- Email -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">IIUC Email Address</label>
+        <input id="email" type="email" placeholder="student@iiuc.ac.bd" class="mt-1 block w-full px-3 py-2 border rounded-lg shadow-sm border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label class="block text-sm font-medium text-gray-700">Password</label>
+        <input id="password" type="password" placeholder="Enter your password" class="mt-1 block w-full px-3 py-2 border rounded-lg shadow-sm border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Remember Me -->
+      <div class="flex items-center">
+        <input type="checkbox" id="remember" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+        <label for="remember" class="ml-2 text-sm text-gray-700">Remember me</label>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="w-full py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold shadow-md">
+        🎓 Sign In to Dashboard
+      </button>
+
+      <!-- Help -->
+      <p class="text-center text-xs text-gray-500 mt-4">
+        Need help? Contact IT Support at <a href="mailto:it@iiuc.ac.bd" class="text-blue-600 hover:underline">it@iiuc.ac.bd</a>
+      </p>
+    </form>
+  </div>
+
+  <!-- JavaScript Validation -->
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Stop page reload
+
+      let email = document.getElementById("email").value.trim();
+      let password = document.getElementById("password").value.trim();
+
+      if (email === "" || password === "") {
+        alert("Please enter both email and password!");
+        return;
+      }
+
+      if (!email.endsWith("@iiuc.ac.bd")) {
+        alert("Please enter a valid IIUC email address!");
+        return;
+      }
+
+      // If validation passes → redirect
+      window.location.href = "dashboard.html";
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IIUC Course Tracker Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex justify-center py-10">
+
+  <div class="bg-white shadow-lg rounded-xl w-full max-w-6xl p-6">
+    <!-- Header -->
+    <div class="flex justify-between items-center border-b pb-4 mb-6">
+      <div>
+        <h1 class="text-xl font-bold flex items-center">
+          <img src="https://upload.wikimedia.org/wikipedia/en/0/0f/International_Islamic_University_Chittagong_logo.png" class="w-6 h-6 mr-2" alt="IIUC Logo">
+          IIUC Course Tracker
+        </h1>
+        <p class="text-sm text-gray-500">Student Dashboard</p>
+      </div>
+      <div class="flex space-x-4 text-gray-500">
+        <span>🔔</span>
+        <span>⚙️</span>
+      </div>
+    </div>
+
+    <!-- Welcome Section -->
+    <div class="mb-6">
+      <h2 class="text-2xl font-bold">Welcome back, Student!</h2>
+      <p class="text-gray-500 text-sm">Here's an overview of your enrolled courses for this semester.</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+      <div class="bg-gray-50 border rounded-lg p-4 text-center">
+        <p class="text-2xl font-bold">6</p>
+        <p class="text-gray-500 text-sm">Enrolled Courses</p>
+      </div>
+      <div class="bg-gray-50 border rounded-lg p-4 text-center">
+        <p class="text-2xl font-bold">18</p>
+        <p class="text-gray-500 text-sm">Total Credits</p>
+      </div>
+      <div class="bg-gray-50 border rounded-lg p-4 text-center">
+        <p class="text-2xl font-bold">3.75</p>
+        <p class="text-gray-500 text-sm">Current GPA</p>
+      </div>
+      <div class="bg-gray-50 border rounded-lg p-4 text-center">
+        <p class="text-2xl font-bold">12</p>
+        <p class="text-gray-500 text-sm">Weeks Remaining</p>
+      </div>
+    </div>
+
+    <!-- My Courses -->
+    <div class="mb-4">
+      <h3 class="font-semibold text-lg mb-2">My Courses</h3>
+      <div class="flex gap-2 mb-4">
+        <input type="text" placeholder="Search courses, instructors, or course codes..." class="flex-1 border rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none">
+        <button class="bg-gray-100 border rounded-lg px-4 py-2 text-sm">Schedule</button>
+      </div>
+    </div>
+
+    <!-- Courses Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      
+      <!-- Course Card -->
+      <div class="border rounded-lg p-4 bg-white">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="bg-yellow-300 text-xs font-bold px-2 py-1 rounded">CSE 101</span>
+          <span class="bg-gray-100 text-xs px-2 py-1 rounded">Computer Science</span>
+        </div>
+        <h4 class="font-bold">Introduction to Programming</h4>
+        <p class="text-sm text-gray-500 mb-2">Instructor: Dr. Rahman Ahmed</p>
+        <p class="text-xs text-gray-600 mb-4">Fundamental concepts of programming using C++ and problem-solving techniques.</p>
+        <div class="flex justify-between text-xs text-gray-500 mb-3">
+          <span>📅 16 weeks</span>
+          <span>👥 120 students</span>
+          <span>3 credits</span>
+        </div>
+        <button class="w-full border rounded-lg py-2 text-sm hover:bg-gray-50">View Course</button>
+      </div>
+
+      <!-- Repeat for other courses -->
+      <div class="border rounded-lg p-4 bg-white">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="bg-yellow-300 text-xs font-bold px-2 py-1 rounded">MAT 201</span>
+          <span class="bg-gray-100 text-xs px-2 py-1 rounded">Mathematics</span>
+        </div>
+        <h4 class="font-bold">Calculus II</h4>
+        <p class="text-sm text-gray-500 mb-2">Instructor: Prof. Sarah Khan</p>
+        <p class="text-xs text-gray-600 mb-4">Advanced calculus including integration techniques, series, and differential equations.</p>
+        <div class="flex justify-between text-xs text-gray-500 mb-3">
+          <span>📅 16 weeks</span>
+          <span>👥 85 students</span>
+          <span>4 credits</span>
+        </div>
+        <button class="w-full border rounded-lg py-2 text-sm hover:bg-gray-50">View Course</button>
+      </div>
+
+      <div class="border rounded-lg p-4 bg-white">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="bg-yellow-300 text-xs font-bold px-2 py-1 rounded">PHY 101</span>
+          <span class="bg-gray-100 text-xs px-2 py-1 rounded">Physics</span>
+        </div>
+        <h4 class="font-bold">Physics I</h4>
+        <p class="text-sm text-gray-500 mb-2">Instructor: Dr. Mohammad Ali</p>
+        <p class="text-xs text-gray-600 mb-4">Classical mechanics, thermodynamics, and wave phenomena with laboratory work.</p>
+        <div class="flex justify-between text-xs text-gray-500 mb-3">
+          <span>📅 16 weeks</span>
+          <span>👥 95 students</span>
+          <span>3 credits</span>
+        </div>
+        <button class="w-full border rounded-lg py-2 text-sm hover:bg-gray-50">View Course</button>
+      </div>
+
+      <!-- More Courses -->
+      <div class="border rounded-lg p-4 bg-white">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="bg-yellow-300 text-xs font-bold px-2 py-1 rounded">ENG 102</span>
+          <span class="bg-gray-100 text-xs px-2 py-1 rounded">English</span>
+        </div>
+        <h4 class="font-bold">Academic Writing</h4>
+        <p class="text-sm text-gray-500 mb-2">Instructor: Ms. Fatima Begum</p>
+        <p class="text-xs text-gray-600 mb-4">Advanced academic writing skills, research methodology, and presentation techniques.</p>
+        <div class="flex justify-between text-xs text-gray-500 mb-3">
+          <span>📅 16 weeks</span>
+          <span>👥 150 students</span>
+          <span>2 credits</span>
+        </div>
+        <button class="w-full border rounded-lg py-2 text-sm hover:bg-gray-50">View Course</button>
+      </div>
+
+      <div class="border rounded-lg p-4 bg-white">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="bg-yellow-300 text-xs font-bold px-2 py-1 rounded">CSE 201</span>
+          <span class="bg-gray-100 text-xs px-2 py-1 rounded">Computer Science</span>
+        </div>
+        <h4 class="font-bold">Data Structures</h4>
+        <p class="text-sm text-gray-500 mb-2">Instructor: Dr. Karim Hassan</p>
+        <p class="text-xs text-gray-600 mb-4">Linear and non-linear data structures, algorithms, and complexity analysis.</p>
+        <div class="flex justify-between text-xs text-gray-500 mb-3">
+          <span>📅 16 weeks</span>
+          <span>👥 78 students</span>
+          <span>3 credits</span>
+        </div>
+        <button class="w-full border rounded-lg py-2 text-sm hover:bg-gray-50">View Course</button>
+      </div>
+
+      <div class="border rounded-lg p-4 bg-white">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="bg-yellow-300 text-xs font-bold px-2 py-1 rounded">ISL 101</span>
+          <span class="bg-gray-100 text-xs px-2 py-1 rounded">Islamic Studies</span>
+        </div>
+        <h4 class="font-bold">Islamic Studies</h4>
+        <p class="text-sm text-gray-500 mb-2">Instructor: Maulana Abdul Malik</p>
+        <p class="text-xs text-gray-600 mb-4">Fundamental teachings of Islam, Quran, Hadith, and Islamic civilization.</p>
+        <div class="flex justify-between text-xs text-gray-500 mb-3">
+          <span>📅 16 weeks</span>
+          <span>👥 200 students</span>
+          <span>3 credits</span>
+        </div>
+        <button class="w-full border rounded-lg py-2 text-sm hover:bg-gray-50">View Course</button>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
